@@ -21,6 +21,64 @@ body {
     background-color: #576F35;
 }
 
+
+
+.whatsapp-float {
+    position: fixed; /* Иконка фиксирована относительно окна */
+    bottom: 20px; /* Отступ от нижнего края */
+    right: 20px; /* Отступ от правого края */
+    z-index: 1000; /* Поверх других элементов */
+    width: 60px; /* Ширина кнопки */
+    height: 60px; /* Высота кнопки */
+    background-color: #25d366; /* Цвет фона WhatsApp */
+    border-radius: 50%; /* Закругленные края */
+    display: flex; /* Центровка содержимого */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Тень для кнопки */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+.whatsapp-float img {
+    width: 40px; /* Ширина изображения */
+    height: 40px; /* Высота изображения */
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe57; /* Изменение цвета при наведении */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4); /* Более выраженная тень */
+}
+
+.call-button {
+    bottom: 100px; /* Расположена выше кнопки WhatsApp */
+    background-color: #5c2e2e; /* Цвет кнопки звонка */
+}
+
+.call-button:hover {
+    background-color: #5c2e2e; /* Цвет при наведении */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.fixed-button {
+    position: fixed;
+    right: 20px; /* Отступ от правого края */
+    z-index: 1000; /* Поверх других элементов */
+    width: 60px; /* Размер кнопки */
+    height: 60px;
+    border-radius: 50%; /* Закругленные края */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer; /* Указатель при наведении */
+}
+
+.fixed-button img {
+    
+    width: 40px;
+    height: 40px;
+}
+
 /* Navbar */
 .navbar {
     position: sticky;
