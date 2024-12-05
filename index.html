@@ -468,6 +468,14 @@
     const navLinks = document.getElementById("navLinks");
     navLinks.classList.toggle("active"); // Переключение класса "active"
 }
+
+        const menuLinks = document.querySelectorAll(".menu-link, .menu-link2, .menu-link3, .shop-button");
+        menuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                const navLinks = document.getElementById("navLinks");
+                navLinks.classList.remove("active"); // Убираем класс "active"
+            });
+        });
     </script>
 </body>
 </html>
