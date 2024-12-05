@@ -31,7 +31,7 @@
             <button class="close-menu" onclick="toggleMenu()">&#10005;</button>
             <a href="#how-it-works" class="menu-link">О нас</a>
             <a href="#vegetables" class="menu-link2">Услуги</a>
-            <a href="#reviews" class="menu-link3">Контакты</a>
+            <a href="tel:+77773615040" target="_blank" class="menu-link3">Контакты</a>
             <a href="#shop-now" class="shop-button">Связаться</a>
         </div>
     </nav>
@@ -455,14 +455,14 @@
             behavior: 'smooth' // Плавная прокрутка
         });
     });
-    document.querySelector('.menu-link3').addEventListener('click', function (e) {
-        e.preventDefault(); // Предотвращаем стандартное поведение ссылки
+    // document.querySelector('.menu-link3').addEventListener('click', function (e) {
+    //     e.preventDefault(); // Предотвращаем стандартное поведение ссылки
 
-        // Прокрутка до элемента с классом "from"
-        document.querySelector('.footer').scrollIntoView({
-            behavior: 'smooth' // Плавная прокрутка
-        });
-    });
+    //     // Прокрутка до элемента с классом "from"
+    //     document.querySelector('.footer').scrollIntoView({
+    //         behavior: 'smooth' // Плавная прокрутка
+    //     });
+    // });
 
     function toggleMenu() {
     const navLinks = document.getElementById("navLinks");
