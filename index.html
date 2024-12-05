@@ -12,7 +12,8 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <span class="icon">&#9632;&#9632;&#9632;</span>COMPANY.NAME
+            <!-- <span class="icon">&#9632;&#9632;&#9632;</span> -->
+            <p>регистрация/перерегистрация юридических лиц</p>
         </div>
         <div class="burger-menu" onclick="toggleMenu()">
             &#9776;
@@ -29,16 +30,10 @@
     <header>
         
         <div class="header1">
-            <div class="block1">
+            <!-- <div class="block1">
                 <h1>Регистрация бизнеса в Казахстане</h1>
                 <p>Мы предоставляем полный спектр услуг для регистрации бизнеса в Казахстане. Специализируемся на работе с иностранными компаниями и предпринимателями, гарантируя соблюдение всех юридических норм и прозрачность на каждом этапе.</p>
-            </div>
-            <div class="block2"></div>
-        </div>
-        <div class="header1">
-            <div class="block3">
-                <img src="img/1.jpg" alt="">
-            </div>
+            </div> -->
             <div class="block4">
                 <h1>Регистрация юридических лиц <span class="highligts">с иностранным участием:</span> Ваш бизнес в Казахстане!</h1>
                 <p>Мы поможем зарегистрировать компанию любой организационно-правовой формы, включая ТОО (Товарищество с ограниченной ответственностью), с учетом всех требований законодательства.  
@@ -85,6 +80,76 @@
                     </div>
                     <div class="howWorks1Title"><span class="highligts">Закажем и изготовим</span> официальную печать вашей компании, соответствующую всем установленным требованиям. </div>
                 </div>
+            </div>
+            <div class="block2"></div>
+        </div>
+        <div class="header1">
+            <div class="block3">
+                <img src="img/1.jpg" alt="">
+            </div>
+            <div class="from">
+                <div class="form-container">
+                    <h1 class="form-title">
+                        Готовы <span class="highlight-red">начать бизнес в Казахстане?</span> Оставьте свои данные, и <span class="highlight-green">мы свяжемся с вами!</span>
+                    </h1>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="fullname" placeholder="Ваше имя" required pattern="^[А-Яа-яЁёA-Za-z\s]+$" title="Имя должно содержать только буквы">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Номер телефона" required pattern="^\+?[0-9]{10,15}$" title="Введите номер телефона в международном формате (например, +77012345678)">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="description" placeholder="Описание" rows="4" required minlength="10" maxlength="300" title="Описание должно содержать от 10 до 300 символов"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">ОТПРАВИТЬ</button>
+                    </form>
+                </div>
+                <!-- <h1>Регистрация юридических лиц <span class="highligts">с иностранным участием:</span> Ваш бизнес в Казахстане!</h1>
+                <p>Мы поможем зарегистрировать компанию любой организационно-правовой формы, включая ТОО (Товарищество с ограниченной ответственностью), с учетом всех требований законодательства.  
+                </p>
+
+                <div class="howWorks1">
+                    <div class="howWorks1Num">
+                        <div class="circle1">
+                            <div class="circle2">
+                                1
+                            </div>
+                        </div>
+                    </div>
+                    <div class="howWorks1Title">Готовим <span class="highligts">все необходимые документы</span> для создания компании, включая устав, решение учредителей и заявление на регистрацию. </div>
+                </div>
+                <div class="howWorks1">
+                    <div class="howWorks1Num">
+                        <div class="circle1">
+                            <div class="circle2">
+                                2
+                            </div>
+                        </div>
+                    </div>
+                    <div class="howWorks1Title">Мы берем на себя <span class="highligts">весь процесс взаимодействия</span> с государственными органами. </div>
+                </div>
+                <div class="howWorks1">
+                    <div class="howWorks1Num">
+                        <div class="circle1">
+                            <div class="circle2">
+                                3
+                            </div>
+                        </div>
+                    </div>
+                    <div class="howWorks1Title">Получение
+                    <span class="highligts">бизнес-идентификационного номера.</span> Мы обеспечим его оперативное получение и внесение в реестр.</div>
+                </div>
+                <div class="howWorks1">
+                    <div class="howWorks1Num">
+                        <div class="circle1">
+                            <div class="circle2">
+                                4
+                            </div>
+                        </div>
+                    </div>
+                    <div class="howWorks1Title"><span class="highligts">Закажем и изготовим</span> официальную печать вашей компании, соответствующую всем установленным требованиям. </div>
+                </div> -->
             </div>
         </div>
     </header>
@@ -173,7 +238,7 @@
                 Почему выбирают <span class="highlight">нас?</span>
             </h2>
             <p class="reviews-description">
-                Words of our customers: impressions and opinions about the quality of our services and the freshness of our products.
+                
             </p>
         </div>
         <div class="reviews-content">
@@ -198,13 +263,13 @@
                     Мы адаптируем наши услуги под ваши потребности, чтобы сделать процесс максимально удобным. 
                 </p>
             </div>
-            <div class="review-card">
+            <!-- <div class="review-card">
                 <img src="img/language.png" alt="Victoria Romashenko" class="review-avatar">
                 <h3 class="review-name">Многоязычная поддержка</h3>
                 <p class="review-text">
                     Консультируем на русском и английском языках.  
                 </p>
-            </div>
+            </div> -->
             <div class="review-card">
                 <img src="img/knowledge.png" alt="Ihor Trachuk" class="review-avatar">
                 <h3 class="review-name">Удаленная работа</h3>
@@ -216,7 +281,7 @@
     </section>
     
 
-    <section class="from">
+    <!-- <section class="from">
         <div class="formTitle"></div>
         <div class="formSub"></div>
         <div class="main-form">
@@ -258,10 +323,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <footer class="footer">
-        <div class="footer-container">
+        <!-- <div class="footer-container">
           <div class="footer-left">
             <h2 class="footer-logo">COMPANY.NAME</h2>
             <p class="footer-description">
@@ -281,10 +346,10 @@
               1678 S. Pioneer Road<br>Salt Lake City UT 84104
             </p>
           </div>
-        </div>
+        </div> -->
         <div class="footer-bottom">
-          <a href="#">Privacy Policy</a> / <a href="#">Cookie settings</a>
-          <p>©Green Harvest 2023</p>
+          <a href="#">Политика конфиденциальности</a> / <a href="#"> Настройки файлов cookie</a>
+          <p>©2024</p>
         </div>
       </footer>
       
