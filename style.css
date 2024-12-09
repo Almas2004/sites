@@ -101,6 +101,14 @@ body {
     gap: 15px;
 }
 
+.nav-links-fullscreen .menu-link3{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
 .nav-links-fullscreen a{
     text-decoration: none;
     font-size: 1rem;
@@ -135,7 +143,7 @@ body {
 .menu-link3 {
     color: #fff;
     background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    /* border: 1px solid rgba(255, 255, 255, 0.7); */
 
 }
 
@@ -743,15 +751,27 @@ textarea:valid {
     margin-top: 5px;
   }
 
+  .phone-link {
+    display: none;
+  }
+
 @media screen and (max-width: 480px) {
     
+    .phone-link {
+        display: block;
+        color: #fff;
+        background-color: transparent; 
+        text-decoration: none;
+    }
+
     .navbar {
         display: flex;
-        justify-content: end;
+        justify-content: space-between;
         padding: 10px 20px;
     }
 
-    .logo {
+
+    .logo p {
         display: none;
     }
 
@@ -801,6 +821,10 @@ textarea:valid {
         border: none;
         color: #fff; /* Цвет текста (иконки) */
         cursor: pointer; /* Указатель мыши */
+    }
+
+    .menu-link3 {
+        display: none;
     }
 
     /* Стили ссылок */
@@ -910,6 +934,8 @@ textarea:valid {
     .block4 h1 {
         /* margin-top: 100px; */
         /* margin-right: 100px; */
+        word-wrap: break-word;
+        height: auto;
         margin-top: 5px;
         width: 100%;
         color: #fbfbfb;
