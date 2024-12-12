@@ -118,6 +118,7 @@ body {
 
 .menu-link {
     color: #fff;
+    white-space: nowrap;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.7);
 
@@ -148,6 +149,8 @@ body {
     color: #fff;
     background-color: transparent;
     white-space: nowrap;
+    font-size: 24px !important;
+    font-weight: 800 !important;
     /* border: 1px solid rgba(255, 255, 255, 0.7); */
 }
 
@@ -162,7 +165,7 @@ body {
     border: none;
     text-transform: uppercase;
 }
-.phone-link
+
 .shop-button:hover {
     background-color: #381616;
 }
