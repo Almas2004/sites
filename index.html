@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Goblin+One&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">        
@@ -106,9 +106,10 @@
                     <h1 class="form-title">
                         Готовы <span class="highlight-red">начать бизнес в Казахстане?</span> Оставьте свои данные, и <span class="highlight-green">мы свяжемся с вами!</span>
                     </h1>
-                    <form class="contact-form" id="contactForm" action="/" method="POST">
+                    <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="b1f59769-cf11-4684-a5c7-7604354a652f">
                         <div class="form-group">
-                            <input type="tвext" name="fullname" placeholder="Ваше имя" required pattern="^[А-Яа-яЁёA-Za-z\s]+$" title="Имя должно содержать только буквы">
+                            <input type="text" name="name" placeholder="Ваше имя" required pattern="^[А-Яа-яЁёA-Za-z\s]+$" title="Имя должно содержать только буквы">
                         </div>
                         <div class="form-group">
                             <input type="tel" name="phone" placeholder="Номер телефона" required pattern="^\+?[0-9]{10,15}$" title="Введите номер телефона в международном формате (например, +77012345678)">
@@ -370,6 +371,46 @@
       
 
     <script>
+        document.getElementById("contactForm").addEventListener("submit", async function(event) {
+    event.preventDefault(); // Отменить стандартное действие формы
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    // URL для отправки на Web3Forms
+    const web3FormsUrl = "https://api.web3forms.com/submit";
+
+    try {
+        const response = await fetch(web3FormsUrl, {
+            method: "POST",
+            body: formData,
+        });
+
+        if (response.ok) {
+            // Показать сообщение об успешной отправке
+            alert("Форма успешно отправлена! Страница будет перезагружена.");
+            form.reset(); // Очистить форму после успешной отправки
+
+            // Перезагрузка страницы
+            window.location.reload();
+            
+            // Перезагрузка страницы через 3 секунды
+            setTimeout(() => {
+                window.location.reload();
+            }, 3000);
+        } else {
+            throw new Error("Ошибка отправки формы");
+        }
+    } catch (error) {
+        // Показать сообщение об успешной отправке
+        alert("Упс! Ошибка.");
+            form.reset(); // Очистить форму после успешной отправки
+
+            // Перезагрузка страницы
+            window.location.reload();
+    }
+});
+
         // Получаем все вопросы
         const faqItems = document.querySelectorAll('.faq-item');
 
